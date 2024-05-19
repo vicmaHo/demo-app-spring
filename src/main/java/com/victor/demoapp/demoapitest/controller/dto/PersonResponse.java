@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Person {
-	
-	private int id;
+public class PersonResponse {
+
+	private int id;	
 	private String name;
 	private String email;
 	private String company;
