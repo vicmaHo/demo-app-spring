@@ -10,12 +10,14 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
 
 @RestController
 @RequestMapping("api/persons")
+@CrossOrigin(origins = {"http://localhost:5173"})
 @RequiredArgsConstructor
 public class PersonController {
 	
