@@ -1,6 +1,7 @@
 package com.victor.demoapp.demoapitest.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import com.victor.demoapp.demoapitest.controller.dto.PersonResponse;
@@ -11,7 +12,9 @@ import lombok.RequiredArgsConstructor;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 
 
@@ -26,6 +29,11 @@ public class PersonController {
 	@GetMapping
 	public List<PersonResponse> getAllPersons() {
 		return service.list();
+	}
+		
+	@DeleteMapping("/{id}")
+	public void delete(@PathVariable("id") int id ) {
+		service.delete(id);
 	}
 	
 }

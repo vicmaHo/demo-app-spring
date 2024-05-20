@@ -14,6 +14,6 @@ public interface PersonService {
 //
 //	PersonResponse update(Long id, PersonRequest value);
 
-	void delete(Long id);
+	void delete(int id);
 	
 }
